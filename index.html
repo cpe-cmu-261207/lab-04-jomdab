@@ -7,13 +7,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<style>
+		h1 {
+			font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+			color: aliceblue;
+		}
+
+		p {
+			font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+			color: aliceblue;
+		}
+	</style>
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+<body class="bg-gradient-to-r from-purple-500 to-blue-500">
+	<div class="text-center mt-12 mb-6 text-4xl">
+		<h1>Minimal Todo List</h1>
+	</div>
+	<div class="flex mx-auto max-w-screen-md justify-center space-x-5">
+		<input onkeypress="enterpress(event)" type='text'>
+		<button class="flex max-w-sm bg-black  font-mono text-white ring-5 ring-gray-300 rounded-xl shadow-xl px-6" onclick='clickla()'>
+			let do this!!
+        </button>
+	</div>
+	<div id='task' class="flex-col justify-center space-y-3 mt-6"></div>
+	<div id='done' class="flex-col justify-center space-y-3 mt-6"></div>
+
 </body>
 
 </html>
